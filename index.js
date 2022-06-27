@@ -17,28 +17,31 @@ try {
         function calculate_Store_Perf() {
             log('Hello I am starting');
             function do_a_heavy_task(){ 
-            const startingTime = new Date().valueOf();
-            log('Starting time : ', startingTime);
+                const startingTime = new Date().valueOf();
+                log('Starting time : ', startingTime);
                 let x = 1
                 for (let i = 1; i < 10000; i++) {
                     x = x*i*i
                 }
-                
-                log('Ending time : ', startingTime);
-                const timeDifference = endingTime - startingTime;
+                const endingTime = new Date().valueOf();
+                    
+                    log('Ending time : ', startingTime);
+                return endingTime - startingTime;
             }
-            const repArray = new Array(6);
+            const repArray = [1,2,3,4,5,6];
+            log('repArray', repArray)
             let sum = 0
             repArray.forEach(() => {
                 sum += do_a_heavy_task();
             })
             const avgPerf = sum / 6;
+            log('##avgPerf', avgPerf);
             let index = 'high';
             if (avgPerf > 11) index = 'low';
             else if (avgPerf > 5) index = 'medium' 
             setPerfFromLS(index)
             window.performanceIndex = index;
-            log('Time Diff : ', timeDifference);
+            log('Time Diff : ', index);
             return index;
         }
 
