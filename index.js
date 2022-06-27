@@ -45,7 +45,11 @@ try {
             it5 = calculate_Store_Perf();
             it6 = calculate_Store_Perf();
 
-            window.performanceIndex = (it1 + it2 + it3 + it4 + it5 + it6) / 6
+            const ff = (it1 + it2 + it3 + it4 + it5 + it6) / 6
+            let index = 'high';
+            if (ff > 11) index = 'low';
+            else if (ff > 5) index = 'medium' 
+            window.performanceIndex = index;
 
             
         } else if (isDebug) {
