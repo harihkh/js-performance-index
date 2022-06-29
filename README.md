@@ -9,7 +9,7 @@ To include js-performance-index in a project. Add the following script in your i
 ## Working
 The library will do some computations on page load and will calculate a `performanceIndex` value. This value can be accessed from `window.performanceIndex`  object in the app.
 
-`window.performanceIndex`:  Its a value between 0 and 1, where **0 means very poor performance** and **1 means normal performance for a common internet user**.
+`window.performanceIndex`:  Its a value can be `high`, `medium` or `low`. It corresponds to the calculated performance of the particular device(and browser combination).
 
 The calculation of performanceIndex is a bit expensive and synchronus operation. Hence by default performanceIndex is calculated only once when the library is first loaded. The value is cached to local storage and used for subsequent page visits.
 
