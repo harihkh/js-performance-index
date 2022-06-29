@@ -13,7 +13,7 @@ The library will do some computations on page load and will calculate a `perform
 
 The calculation of performanceIndex is a bit expensive and synchronus operation. Hence by default performanceIndex is calculated only once when the library is first loaded. The value is cached to local storage and used for subsequent page visits.
 
-If you want the value to be re-calculated on every page load you can disable the caching by passing `no-cache` parameter when loading the script.
+If you want the value to be re-calculated on every page load you can disable the caching by passing `no-cache` attribute when loading the script.
 
 **Loading Script with no-cache**
 
@@ -22,7 +22,7 @@ If you want the value to be re-calculated on every page load you can disable the
 Also, if you want to re-calcualte the performance explicitly inside your app,  use the `window.computePerformance` function. This function will return the newly calculated performanceIndex as well as cache it.
 
 ## Debug Mode
-You can also load the library in debug mode to get helpful / debugging console logs. You can do this by passing the debug parameter on loading the library.
+You can also load the library in debug mode to get helpful / debugging console logs. You can do this by passing the debug attribute on loading the library.
 
 **Loading Script in debug mode**
 
